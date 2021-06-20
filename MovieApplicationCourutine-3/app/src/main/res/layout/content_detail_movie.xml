@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/image_poster"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="18dp"
+        android:src="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_poster"
+        tools:text="Title" />
+
+
+    <TextView
+        android:id="@+id/text_dates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Release Date"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_title"
+        app:layout_constraintStart_toStartOf="@+id/text_title"
+        app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_dates"
+        app:layout_constraintStart_toStartOf="@+id/text_dates"
+        app:layout_constraintTop_toBottomOf="@+id/text_dates"
+        tools:text="date" />
+
+    <TextView
+        android:id="@+id/text_direct"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Original Languange"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_dates"
+        app:layout_constraintStart_toStartOf="@+id/text_date"
+        app:layout_constraintTop_toBottomOf="@+id/text_date" />
+
+    <TextView
+        android:id="@+id/text_director"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="@+id/text_direct"
+        app:layout_constraintStart_toStartOf="@+id/text_direct"
+        app:layout_constraintTop_toBottomOf="@+id/text_direct"
+        tools:text="Director" />
+
+    <TextView
+        android:id="@+id/text_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Description"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_director"
+        app:layout_constraintStart_toStartOf="@+id/text_director"
+        app:layout_constraintTop_toBottomOf="@+id/text_director" />
+
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_desc"
+        app:layout_constraintStart_toStartOf="@+id/text_desc"
+        app:layout_constraintTop_toBottomOf="@+id/text_desc"
+        tools:text="Deskripsi" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="Favorite"
+        app:layout_anchorGravity="bottom|end"
+        app:layout_constraintBottom_toBottomOf="@+id/image_poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_poster"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_favorite_white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
